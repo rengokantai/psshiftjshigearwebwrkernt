@@ -32,3 +32,15 @@ worker.js
 importScripts('hepler.js');
 console.log('this will print after the helper.js loads');
 ```
+###7 Message Types
+Dedicated worker - single execution context  
+Shared worker - Multiple Execution contexts
+
+###9 Demo: Dedicated Worker Lifecycle
+index.html
+```
+let worker = new Worker('worker.js');
+worker.postMessage();
+worker.terminate();
+worker.postMessage('this will not work');
+```
